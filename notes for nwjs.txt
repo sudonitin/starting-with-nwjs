@@ -1,0 +1,11 @@
+INSTALLATION
+npm install node-webkit-builder -g
+npm install nw -g
+
+RUNNING AN APP
+Create a package.json including name of ur application
+execute the application on cmd by this command "nw ."
+
+CREATING AN EXE OF YOUR APPLICATION
+Use the below command to make an exe of your project
+nwbuild -v 0.14.6  -p win32,win64 .

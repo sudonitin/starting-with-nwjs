@@ -1,0 +1,14 @@
+{
+
+	"name": "Tst NW.js App",
+	"main": "index.html",
+	"version": "1.0.0",
+	"dependencies" : {
+	},
+	"window": {
+		"title": "Tst NW.js App",
+		"width": 1000,
+		"height": 800,
+		"toolbar": false
+	}
+}
