@@ -8,7 +8,11 @@
 	"window": {
 		"title": "Tst NW.js App",
 		"width": 1000,
-		"height": 800,
-		"toolbar": false
+		"height": 400
+	},
+	"webkit":
+	{
+		"java": true
 	}
+
 }

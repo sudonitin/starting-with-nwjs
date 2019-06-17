@@ -2,10 +2,50 @@
 <html>
 <head>
 	<title>My first NW js App</title>
+	<script type="text/javascript">
+		var nw = require('nw.gui');
+		// nw.Window.get().showDevTools();
+		var whichNode;
+
+		var paraMenu = new nw.Menu();
+
+		paraMenu.append(new MenuItem({
+			label: 'Remove me',
+			click: function(){
+				whichNode.parentNode.removeChild(whichNode);
+			}
+		}));
+	</script>
 </head>
-<body>
-	<center>
+<body onload="my()">
+	<center id='header'>
 		<h1>Hello world!!!</h1>
 	</center>
+	<ul>
+		<li>I am globefire</li>
+		<li>I am nobody</li>
+		<li>I am demo user</li>
+		<li>I am fakeguy</li>
+	</ul>
+	<p>programming is all about using google</p>
+	<p>programming is all about using github</p>
+	<p>programming is all about using stackoverflow</p>
+	<p>programming is all about using youtube</p>
+
+	<script type="text/javascript">
+		document.body.addEventListener('contextmenu', function(e){
+			e.preventDeafult();
+			if (e.target.localName == 'p') {
+				whichNode = e.srcElement;
+				paraMenu.popup(e.x,e.y);	
+			}
+		});
+
+		function my(){
+			console.log('hello world');
+			document.getElementById('header').style.color = 'red';
+		}
+	</script>
+
 </body>
 </html>
